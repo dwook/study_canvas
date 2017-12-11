@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style> 
+        canvas  {
+            border: #333 10px solid;
+          
+        }
+    </style>
+</head>
+
+<body>
+
+        <canvas id="myCanvas1" width="550px" height="350px"></canvas>
+        <canvas id="myCanvas2" width="550px" height="350px"></canvas>
+        <canvas id="myCanvas3" width="550px" height="350px"></canvas>
+        <canvas id="myCanvas4" width="550px" height="350px"></canvas>
+        <canvas id="myCanvas5" width="550px" height="350px"></canvas>
+        <canvas id="myCanvas6" width="550px" height="350px"></canvas>
+        <canvas id="myCanvas7" width="550px" height="350px"></canvas>
+        <canvas id="myCanvas8" width="550px" height="350px"></canvas>
+        <canvas id="myCanvas9" width="550px" height="350px"></canvas>
+        <canvas id="myCanvas10" width="550px" height="350px"></canvas>
+        <script>
+        var canvas1 = document.querySelector('#myCanvas1');
+        var canvas2 = document.querySelector('#myCanvas2');
+        var canvas3 = document.querySelector('#myCanvas3');
+        var canvas4 = document.querySelector('#myCanvas4');
+        var canvas5 = document.querySelector('#myCanvas5');
+        var canvas6 = document.querySelector('#myCanvas6');
+        var canvas7 = document.querySelector('#myCanvas7');
+        var canvas8 = document.querySelector('#myCanvas8');
+        var canvas9 = document.querySelector('#myCanvas9');
+        var canvas10 = document.querySelector('#myCanvas10');
+        var context1 = canvas1.getContext('2d');
+        var context2 = canvas2.getContext('2d');
+        var context3 = canvas3.getContext('2d');
+        var context4 = canvas4.getContext('2d');
+        var context5 = canvas5.getContext('2d');
+        var context6 = canvas6.getContext('2d');
+        var context7 = canvas7.getContext('2d');
+        var context8 = canvas8.getContext('2d');
+        var context9 = canvas9.getContext('2d');
+        var context10 = canvas10.getContext('2d');
+
+
+        context1.moveTo(50, 50);  // 시작점
+        context1.lineTo(450, 300);
+        context1.closePath();
+        context1.lineWidth = 5;
+        context1.strokeStyle = "steelblue";
+        context1.stroke();
+
+        context2.moveTo(160, 130);  // 시작점
+        context2.lineTo(75,200);
+        context2.lineTo(150,275); 
+        context2.lineTo(250,230);    
+        context2.closePath();
+        context2.lineWidth = 5;
+        context2.strokeStyle = "#333333";
+        context2.fillStyle = "#FFCC00";  
+        context2.stroke();  // stroke() 이후에 선을 그리는 명령은 stroke()를 다시 호출하지 않으면 무시됨.
+        context2.fill(); 
+
+        context3.moveTo(50, 130);
+        context3.quadraticCurveTo(200, 400, 490, 100);
+        context3.closePath();
+        context3.lineWidth = 15;
+        context3.strokeStyle = "#FFCC00"
+        context3.stroke();    
+
+        context4.moveTo(50, 130);
+        context4.bezierCurveTo(300, 50, 200, 400, 490, 100);
+        context4.lineTo(490, 300);
+        context4.lineTo(50, 300);
+        context4.closePath();
+        context4.lineWidth = 15;
+        context4.strokeStyle = "#FFCC00"
+        context4.fillStyle = "#FFDE58";
+        context4.stroke();
+        context4.fill();
+
+        context5.beginPath();  // 새로운 shape    
+        context5.moveTo(160, 130);
+        context5.lineTo(75, 200);
+        context5.lineTo(150, 275);
+        context5.lineTo(250, 230);
+        context5.closePath(); 
+        context5.lineWidth = 5;
+        context5.strokeStyle = "#333";
+        context5.fillStyle = "#FFCC00";
+        context5.fill();
+        context5.stroke();
+        context5.beginPath();  // 새로운 shape   
+        context5.moveTo(50, 50);
+        context5.lineTo(450, 300);
+        context5.closePath();
+        context5.lineWidth = 45;
+        context5.strokeStyle = "steelblue";
+        context5.stroke();
+
+        context6.beginPath();
+        context6.rect(75, 100, 250, 150);
+        context6.closePath();  // 있으나 없으나 똑같음
+        context6.lineWidth = 10;
+        context6.strokeStyle = "#666666";    
+        context6.stroke();
+        context6.fillStyle = "#51DCFF";
+        context6.fill();
+
+        context7.strokeStyle = "#FF3399";
+        context7.strokeRect(300, 50, 200, 200);
+        context7.fillStyle = "#00CCFF";
+        context7.fillRect(50, 50, 200, 200);
+
+        context8.beginPath();
+        context8.moveTo(100, 100);
+        context8.lineTo(100, 300);
+        context8.lineTo(300, 300);
+        context8.closePath();
+        context8.lineWidth = 10;
+        context8.strokeStyle = '#666666';
+        context8.stroke();
+        context8.fillStyle = "#FFCC00";
+        context8.fill();
+
+        function draw() {
+            context9.beginPath();
+            context9.arc(200, 200, 93, Math.PI / 2, Math.PI, true);
+            context9.fillStyle = '#FF6A6A';
+            context9.fill();
+            context9.lineWidth = 20;
+            context9.strokeStyle  = '#FF0000';
+            context9.stroke();
+        }
+        draw();
+    
+            context10.beginPath();
+            context10.arc(200, 200, 93, 0, 2 * Math.PI, true);
+            context10.fillStyle = "#E2FFC6";
+            context10.fill();
+            context10.lineWidth = 20;
+            context10.strokeStyle = "#66CC01";
+            context10.stroke();
+
+        </script>
+
+    
+</body>
+</html>
