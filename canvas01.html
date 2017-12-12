@@ -25,6 +25,7 @@
         <canvas id="myCanvas8" width="550px" height="350px"></canvas>
         <canvas id="myCanvas9" width="550px" height="350px"></canvas>
         <canvas id="myCanvas10" width="550px" height="350px"></canvas>
+        <canvas id="myCanvas11" width="550px" height="350px"></canvas>
         <script>
         var canvas1 = document.querySelector('#myCanvas1');
         var canvas2 = document.querySelector('#myCanvas2');
@@ -36,6 +37,7 @@
         var canvas8 = document.querySelector('#myCanvas8');
         var canvas9 = document.querySelector('#myCanvas9');
         var canvas10 = document.querySelector('#myCanvas10');
+        var canvas11 = document.querySelector('#myCanvas11');
         var context1 = canvas1.getContext('2d');
         var context2 = canvas2.getContext('2d');
         var context3 = canvas3.getContext('2d');
@@ -46,6 +48,7 @@
         var context8 = canvas8.getContext('2d');
         var context9 = canvas9.getContext('2d');
         var context10 = canvas10.getContext('2d');
+        var context11 = canvas11.getContext('2d');
 
 
         context1.moveTo(50, 50);  // 시작점
@@ -146,6 +149,19 @@
             context10.lineWidth = 20;
             context10.strokeStyle = "#66CC01";
             context10.stroke();
+
+            context11.beginPath();
+            context11.moveTo(100, 100);
+            context11.lineTo(100, 300);
+            context11.lineTo(300, 300);
+            context11.closePath();
+            context11.lineWidth = 20;
+            context11.strokeStyle = '#666666';
+            context11.lineJoin = "miter";   // miter, round, bevel
+            context11.miterLimit = 60;
+            context11.stroke();
+            context11.fillStyle = "#FFCC00";
+            context11.fill();     
 
         </script>
 
